@@ -2,9 +2,14 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Http\Requests\PostRequest;
 use App\Post;
 use Illuminate\HTTP\Request;
+
+
+
+
 
 /**
  * Post一覧を表示する
@@ -16,6 +21,7 @@ class PostController extends Controller
 {
     public function index(Post $post)
     {
+
         return view('index')->with(['posts' => $post->getPaginateByLimit()]);
     }
 
@@ -52,5 +58,7 @@ class PostController extends Controller
     {
         $post->delete();
         return redirect('/');
+
+
     }
 }
