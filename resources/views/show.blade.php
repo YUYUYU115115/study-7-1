@@ -7,6 +7,7 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
     </head>
     <body>
+        <a href="">{{ $post->category->name }}</a>
         <h1>Blog Name</h1>
         <p class='edit'>[<a href="/posts/{{ $post->id }}/edit">edit</a>]</p>
         <form action="/posts/{{$post->id}}" id="form_delete" method="post">
